@@ -111,3 +111,18 @@ fun FormSiswa(
                 label = { Text(text = stringResource(R.string.alamat)) },
                 onValueChange = { txtAlamat = it }
             )
+
+            Spacer(modifier = Modifier.height(20.dp))
+            Button(
+                modifier = Modifier.fillMaxWidth(1f),
+                enabled = txtAlamat.isNotEmpty() && txtNama.isNotEmpty(),
+                onClick = {
+                    val listData = listOf(txtNama, txtGender, txtAlamat)
+                    onSubmitButtonClicked(listData)
+                }
+            ) {
+                Text(stringResource(R.string.submit))
+            }
+        }
+    }
+}
