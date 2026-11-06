@@ -53,3 +53,27 @@ fun TampilSiswa(
                     Text(text = statusUiSiswa.nama, fontWeight = FontWeight.Bold, fontSize = 16.sp)
                 }
                 HorizontalDivider(thickness = 1.dp)
+
+                Column {
+                    Text(text = stringResource(R.string.gender).uppercase(), fontSize = 16.sp)
+                    Text(text = statusUiSiswa.gender, fontWeight = FontWeight.Bold, fontSize = 16.sp)
+                }
+                HorizontalDivider(thickness = 1.dp)
+
+                Column {
+                    Text(text = stringResource(R.string.alamat).uppercase(), fontSize = 16.sp)
+                    Text(text = statusUiSiswa.alamat, fontWeight = FontWeight.Bold, fontSize = 16.sp)
+                }
+                HorizontalDivider(thickness = 1.dp)
+
+                Spacer(modifier = Modifier.height(8.dp))
+                Button(
+                    modifier = Modifier.fillMaxWidth(),
+                    onClick = onBackButtonClicked
+                ) {
+                    Text(stringResource(R.string.back))
+                }
+            }
+        }
+    }
+}
