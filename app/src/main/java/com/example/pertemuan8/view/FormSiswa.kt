@@ -39,4 +39,17 @@ fun FormSiswa(
     pilihanJK: List<String>,
     onSubmitButtonClicked: (List<String>) -> Unit,
     modifier: Modifier = Modifier
-) {}
+) {
+    var txtNama by rememberSaveable { mutableStateOf("") }
+    var txtAlamat by remember { mutableStateOf("") }
+    var txtGender by remember { mutableStateOf("") }
+
+    Scaffold(
+        modifier = modifier,
+        topBar = {
+            TopAppBar(
+                title = { Text(stringResource(id = R.string.app_name), color = Color.White) },
+                colors = TopAppBarDefaults.mediumTopAppBarColors(containerColor = colorResource(id = R.color.purple_500))
+            )
+        }
+    ) }
