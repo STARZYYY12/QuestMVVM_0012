@@ -6,3 +6,10 @@ data class Siswa(
     val alamat: String = ""
 )
 
+// Data pendukung opsi jenis kelamin
+object DataJK {
+    val isiJK = listOf(
+        com.example.pertemuan8.R.string.laki,
+        com.example.pertemuan8.R.string.wanita
+    )
+}
