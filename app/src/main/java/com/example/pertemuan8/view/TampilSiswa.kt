@@ -39,4 +39,17 @@ fun TampilSiswa(
                 colors = TopAppBarDefaults.mediumTopAppBarColors(containerColor = colorResource(id = R.color.purple_500)),
             )
         }
-    )
+    ) { isiRuang ->
+        Column(
+            modifier = Modifier.padding(isiRuang),
+            verticalArrangement = Arrangement.SpaceBetween
+        ) {
+            Column(
+                modifier = Modifier.padding(16.dp),
+                verticalArrangement = Arrangement.spacedBy(8.dp)
+            ) {
+                Column {
+                    Text(text = stringResource(R.string.nama).uppercase(), fontSize = 16.sp)
+                    Text(text = statusUiSiswa.nama, fontWeight = FontWeight.Bold, fontSize = 16.sp)
+                }
+                HorizontalDivider(thickness = 1.dp)
