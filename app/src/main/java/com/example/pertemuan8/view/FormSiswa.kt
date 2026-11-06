@@ -76,3 +76,21 @@ fun FormSiswa(
                 thickness = 1.dp,
                 color = Color.Blue
             )
+
+            Row {
+                pilihanJK.forEach { item ->
+                    Row(
+                        modifier = Modifier.selectable(
+                            selected = txtGender == item,
+                            onClick = { txtGender = item }
+                        ),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        RadioButton(
+                            selected = txtGender == item,
+                            onClick = { txtGender = item }
+                        )
+                        Text(item)
+                    }
+                }
+            }
