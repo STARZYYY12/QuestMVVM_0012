@@ -68,4 +68,11 @@ fun FormSiswa(
                 label = { Text(text = stringResource(R.string.nama)) },
                 onValueChange = { txtNama = it }
             )
-}
+
+            HorizontalDivider(
+                modifier = Modifier
+                    .padding(12.dp)
+                    .width(250.dp),
+                thickness = 1.dp,
+                color = Color.Blue
+            )
